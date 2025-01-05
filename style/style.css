@@ -1,0 +1,106 @@
+body {
+    font-family: "Silkscreen", regular;
+}
+
+.topnav a {
+    float: right;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.topnav a:hover {
+    background-color: purple;
+    color: aqua;
+}
+
+.topnav a.active {
+    background-color: yellow;
+    color: red;
+}
+
+.btn-group {
+    background-color: black;
+    width: 1920px;
+    height: 129px;
+    opacity: 0.5;
+    overflow: hidden;
+}
+
+.btn-group button {
+    font-family: "Silkscreen", regular;
+    background-color: #EC68AA;
+    border: 1px slateblue;
+    color: white;
+    padding: 10px 24px;
+    cursor: pointer;
+    float: right;
+    text-align: center;
+}
+
+.btn-group button:not(:last-child) {
+    border-right: none;
+}
+
+.btn-group::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.btn-group button:hover {
+    background-color: blueviolet;
+}
+
+#HeroImage div{
+    position: absolute;
+    width: 1904px;
+    height: 1064px;
+    border: 16px solid #EC68AA;
+    background-color: rgba(0, 0, 0, 0.44);
+    display: inline-block;
+    left: 0px;
+    top: 221px;
+}
+
+#Preview div{
+    position: absolute;
+    width: 1920px;
+    height: 1080px;
+    background-color: rgba(0, 0, 0, 0.44);
+    display: inline-block;
+    left: 0px;
+    top: 1387px;
+}
+
+#Rotation div{
+    position: absolute;
+    width: 1920px;
+    height: 1080px;
+    background-color: rgba(0, 0, 0, 0.44);
+    display: inline-block;
+    left: 0px;
+    top: 2567px;
+}
+
+#Rotation div{
+    position: absolute;
+    width: 1920px;
+    height: 1080px;
+    background-color: rgba(0, 0, 0, 0.44);
+    display: inline-block;
+    left: 0px;
+    top: 2567px;
+}
+
+#Description div{
+    position: absolute;
+    width: 1920px;
+    height: 1080px;
+    background-color: rgba(0, 0, 0, 0.44);
+    display: inline-block;
+    left: 0px;
+    top: 3751px;
+}
