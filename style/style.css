@@ -1,14 +1,70 @@
-body {
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
     font-family: "Silkscreen", regular;
 }
 
+header {
+    position: fixed; /* Fixed header at top edge of screen */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    line-height: 60px;
+    font-size: 30px;
+    z-index: 100;
+  }
+
+  section {
+    height: 100vh;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    z-index: 5;
+  }
+  .content {
+    margin-top: 60px;
+  }
+
+  #web-canvas {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  position: fixed;
+  touch-action: none;
+}
+
+#web-canvas-container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+  /* Above AG */
+
 .topnav a {
-    float: right;
+    /* float: right;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 16px; */
+
+    color: rgb(0, 0, 0);
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 18px;
 }
 
 .topnav a:hover {
@@ -55,52 +111,34 @@ body {
 }
 
 #HeroImage div{
-    position: absolute;
-    width: 1904px;
-    height: 1064px;
-    border: 16px solid #EC68AA;
-    background-color: rgba(0, 0, 0, 0.44);
-    display: inline-block;
-    left: 0px;
-    top: 221px;
+    background-color: red;
+
+}
+
+#More div{
+    background-color: orange;
+
 }
 
 #Preview div{
-    position: absolute;
-    width: 1920px;
-    height: 1080px;
-    background-color: rgba(0, 0, 0, 0.44);
-    display: inline-block;
-    left: 0px;
-    top: 1387px;
+    background-color: yellow;
+
 }
 
 #Rotation div{
-    position: absolute;
-    width: 1920px;
-    height: 1080px;
-    background-color: rgba(0, 0, 0, 0.44);
-    display: inline-block;
-    left: 0px;
-    top: 2567px;
+    background-color: green;
+
 }
 
 #Rotation div{
-    position: absolute;
-    width: 1920px;
-    height: 1080px;
-    background-color: rgba(0, 0, 0, 0.44);
-    display: inline-block;
-    left: 0px;
-    top: 2567px;
+    background-color: blue;
+
 }
 
 #Description div{
-    position: absolute;
-    width: 1920px;
-    height: 1080px;
-    background-color: rgba(0, 0, 0, 0.44);
-    display: inline-block;
-    left: 0px;
-    top: 3751px;
-}
+    background-color: purple;
+} 
+
+#Individual div{
+    background-color: rgb(128, 0, 11);
+} 
