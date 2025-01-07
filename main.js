@@ -16,27 +16,7 @@ import {
   Vector3
 } from 'webgi';
 
-async function setupViewer() {
-  const viewer = new ViewerApp({
-      canvas: document.getElementById('web-canvas'),
-  });
 
-  await addBasePlugins(viewer);
-  await viewer.addPlugin(ScrollableCameraViewPlugin);
-
-  // const manager = await viewer.getPlugin(AssetManagerPlugin);
-  // This must be called after adding any plugin that changes the render pipeline.
-	viewer.renderer.refreshPipeline();
-
-  // Load an environment map if not set in the glb file
-  await viewer.setEnvironmentMap("./assets/autumn forest.hdr");
-
-  // await manager.addFromPath("./assets/casio watch.glb");
-  await viewer.load("./assets/casio g-shock watch v.glb");
-
-  // let scrollSection = document.getElementById("scrollSection");
-  // await viewer.getPlugin(new ScrollableCameraViewPlugin(scrollSection));
-}
 
 setupViewer();
 
