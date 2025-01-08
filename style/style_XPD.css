@@ -6,112 +6,42 @@
 
 body {
     font-family: "Silkscreen", regular;
-    width: 100%;
-    height: 100%;
+    width: 1920px;
+    margin: 0 auto;
+    padding: 0;
 }
 
-header {
-    position: fixed; /* Fixed header at top edge of screen */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    background-color: #333;
-    color: white;
-    text-align: center;
-    line-height: 60px;
-    font-size: 30px;
-    z-index: 100;
-  }
-
-  section {
-    height: 100vh;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 40px;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    z-index: 5;
-  }
-  .content {
-    margin-top: 60px;
-  }
-
-  #web-canvas {
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  position: fixed;
-  touch-action: none;
-}
-
-#web-canvas-container {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  z-index: 1;
-}
-
-  /* Above AG */
-
-.topnav a {
-    /* float: right;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 16px; */
-
-    color: rgb(0, 0, 0);
-    margin: 0 15px;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-.topnav a:hover {
-    background-color: purple;
-    color: aqua;
-}
-
-.topnav a.active {
-    background-color: yellow;
-    color: red;
-}
-
-.btn-group {
-    background-color: black;
+.topnav {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(150, 150, 150, 1);
+    position: fixed;
     width: 1920px;
     height: 129px;
-    opacity: 0.5;
-    overflow: hidden;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
-.btn-group button {
-    font-family: "Silkscreen", regular;
-    background-color: #EC68AA;
-    border: 1px slateblue;
-    color: white;
-    padding: 10px 24px;
-    cursor: pointer;
-    float: right;
-    text-align: center;
+.logo div{
+    display: flex;
+    align-items: center;
 }
 
-.btn-group button:not(:last-child) {
-    border-right: none;
+#navbar div {
+    display: flex;
+    align-items: center;
 }
 
-.btn-group::after {
-    content: "";
-    clear: both;
-    display: table;
+#buttons div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
-.btn-group button:hover {
-    background-color: blueviolet;
+#logopic div{
+    width: 108px;
+    height: 109px;
 }
 
 #HeroImage div{
