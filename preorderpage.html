@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Multiple Section Webpage</title>
-    <link rel="stylesheet" href="./style/style_AG.css">
+    <title>Pre-Order Page</title>
+    <link rel="stylesheet" href="./style/style_preorder_XPD.css">
   </head>
 
   <body>
@@ -15,25 +15,47 @@
         <!-- <a href="#contactus">Contact Us</a> -->
         <a href="#about">About</a>
         <a href="#models">Models</a>
-        <a href="#Register">Register</a>
+        <a href="#Register">Register</a> 
         <!-- <div class="btn-group"> -->
             <button>Login</button>
+            <button>Pre-Order Now</button>     
       </nav>
     </header>
 
-    <a href="#top" class="back-to-top">Back to Top</a>
 
     <!-- Body -->
     <div class="content">
       <section id="pre-order">
-        Pre-Order Section
-        insert cool form here
+        <h2>Join our preorder list!</h2>
+    <form action="/action_page.php">
+    <label for="Country/Regions">Country/Regions</label>
+    <br>
+        <input type="text" id="Country/Regions"
+    country="Country/Regions" value=""><br>
+    <label for="email">Email</label>
+    <br>
+        <input type="text" id="email"
+    email="email" value="">
+    <p>We will send updates of the products to your mobile number or email. </p><br>
+    <label for="mnumber">Mobile Number</label>
+    <br>
+        <input type="text" id="mnumber"
+    mnumber="mnumber" value="">
+    <p>Your mobile number cannot be changed, so please ensure it's correct. </p><br>
+    <label><input type="checkbox" />I don't have a mobile number</label><br><br>
+        <input type="submit" value="Submit your interest">
+    </form>
       </section>
 		</div>
+    <div>
+        <p>Prices are inclusive of GST. Free delivery for all orders.</p>
+        <p>Industry-standard encryption is used to protect the confidentiality of your personal information.</p>
+    </div>
 
     <!-- Footer -->
     <footer>
       Copyright &copy; 2024 Potato. All rights reserved.
     </footer>
+    <p>Privacy policy</p><p>Refunds</p><p>Help</p>
   </body>
 </html>
