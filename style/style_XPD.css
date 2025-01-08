@@ -9,31 +9,14 @@ body {
 }
 
 .navbar {
-    background-color: rgba(0, 0, 0, 0.5);
-    border: 1px solid rgba(150, 150, 150, 1);
+    background-color: rgba(0, 0, 0, 0.95);
     position: fixed;
     width: 100%;
-    height: 128px;
+    height: 64px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-
-.navdiv {
-    width: 100%;
-    height: 128px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.logo div{
-    display: flex;
-    align-items: center;
-}
-
-.logoname {
-    font-size: 32px;
+    overflow: hidden;
 }
 
 .navbar div {
@@ -41,14 +24,97 @@ body {
     align-items: center;
 }
 
-.buttons div {
+.navdiv {   
+    width: 100%;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 120px;
+    padding-right: 120px;
+}
+
+.logo div{
     display: flex;
     align-items: center;
 }
 
-.logopic div{
-    width: 108px;
-    height: 109px;
+.logopicc {
+    width: 48px;
+    height: 48px;
+}
+
+.logoname {
+    font-size: 32px;
+    margin-left: 24px;
+    color: white;
+}
+
+.chapters a {
+    font-size: 16px;
+    color: white;
+    display: flex;
+    align-items: center;
+    margin-left: 40px;
+    margin-right: 40px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.preorderbtn button {
+    font-family: "Silkscreen", regular;
+    font-size: 16px;
+    padding: 8px 32px;
+    border: none;
+    outline: none;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 8px;
+}
+
+.preorderbtn button::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #EC68AA;
+    left: 0;
+    top: 0;
+    border-radius: 8px;
+}
+
+.preorderbtn button::before {
+    content: "";
+    background: linear-gradient(
+        45deg,
+        #FF0000, #FF7300, #FFFB00, #48FF00,
+        #00FFD5, #002BFF, #FF00C8, #FF0000
+    );
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+    border-radius: 8px;
+    opacity: 0;
+}
+
+@keyframes glowing {
+    0%  {background-position: 0 0;}
+    50% {background-position: 400% 0;}
+    100% {background-position: 0 0;}
+}
+
+.preorderbtn button:hover::before {
+    opacity: 1;
 }
 
 #HeroImage div{
