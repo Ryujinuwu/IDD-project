@@ -137,35 +137,3 @@ body {
     opacity: 1;
 }
 
-#HeroImage div{
-    background-color: red;
-
-}
-
-#More div{
-    background-color: orange;
-
-}
-
-#Preview div{
-    background-color: yellow;
-
-}
-
-#Rotation div{
-    background-color: green;
-
-}
-
-#Rotation div{
-    background-color: blue;
-
-}
-
-#Description div{
-    background-color: purple;
-} 
-
-#Individual div{
-    background-color: rgb(128, 0, 11);
-} 
