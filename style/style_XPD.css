@@ -59,6 +59,25 @@ body {
     margin-right: 40px;
     text-decoration: none;
     cursor: pointer;
+    position: relative;
+    text-decoration: none;
+}
+
+.chapters a::after {
+    content: "";
+    position: absolute;
+    background-color: white;
+    height: 2px;
+    width: 100%;
+    left: 0;
+    bottom: -8px;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform .3s;
+}
+
+.chapters a:hover::after {
+    transform: scaleX(1);
 }
 
 .preorderbtn button {
