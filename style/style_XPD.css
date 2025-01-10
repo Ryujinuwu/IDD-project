@@ -5,33 +5,43 @@
 }
 
 body {
-    font-family: "Silkscreen", regular;
+    font-family: "Silkscreen", serif;
+    font-weight: 400;
+    font-style: normal;
     background-color: #181646;
 }
 
 h1 {
-    font-family: "Silkscreen", regular;
-    font-size: 72px;
+    font-family: "Silkscreen", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 96px;
     color: white;
     margin-bottom: 8px;
 }
 
 h2 {
-    font-family: "Silkscreen", regular;
-    font-size: 48px;
+    font-family: "Silkscreen", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 80px;
     color: white;
     margin-bottom: 8px;
 }
 
 h3 {
-    font-family: "Silkscreen", regular;
-    font-size: 24px;
+    font-family: "Silkscreen", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 32px;
     color: white;
     margin-bottom: 8px;
 }
 
 p {
-    font-family: "Silkscreen", regular;
+    font-family: "Silkscreen", serif;
+    font-weight: 400;
+    font-style: normal;
     font-size: 16px;
     color: white;
     margin-bottom: 8px;
@@ -193,7 +203,7 @@ p {
     cursor: pointer;
     position: relative;
     z-index: 0;
-    border-radius: 8px;
+    border-radius: 40px;
     margin-bottom: 36px;
 }
 
@@ -206,7 +216,7 @@ p {
     background-color: #333;
     left: 0;
     top: 0;
-    border-radius: 8px;
+    border-radius: 40px;
 }
 
 .homepagebtn button::before {
@@ -226,7 +236,7 @@ p {
     filter: blur(8px);
     animation: glowing 20s linear infinite;
     transition: opacity .3s ease-in-out;
-    border-radius: 8px;
+    border-radius: 40px;
     opacity: 0;
 }
 
@@ -253,7 +263,7 @@ p {
     width: 680px;
     height: 256px;
     background-color: rgba(217, 217, 217, 0.5);
-    border-radius: 40px;
+    border-radius: 72px;
     display: inline-block;
     box-sizing: border-box;
     padding: 24px 32px;
@@ -261,6 +271,7 @@ p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 
 .abtleft {
@@ -278,7 +289,7 @@ p {
 }
 
 .title {
-    margin-bottom: 32px;
+    margin-bottom: 40px;
 }
 
 .abtsect {
@@ -290,4 +301,96 @@ p {
 #preview {
     position: absolute;
     top: 2480px;
+}
+
+#why {
+    position: absolute;
+    top: 3640px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.smallwhybg {
+    width: 472px;
+    height: 504px;
+    border-radius: 72px;
+    background-color: rgba(168, 168, 168, 0.75);
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 24px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.bigwhy {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.whymargin {
+    margin-bottom: 40px;
+}
+
+#specs {
+    position: absolute;
+    top: 4800px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.specsbg {
+    width: 456px;
+    height: 928px;
+    border-radius: 72px;
+    background-color: rgba(255, 255, 255, 0.15);
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 24px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#powerup {
+    position: absolute;
+    top: 5960px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.powerupdesc {
+    width: 800px;
+    height: 792px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pudesctop {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pudescmid {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.pudescbot {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
