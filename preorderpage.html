@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pre-Order Page</title>
-    <link rel="stylesheet" href="./style/style_preorder_XPD.css">
+    <link rel="stylesheet" href="static/style/style_preorder_xpd.css">
   </head>
 
   <body>
     <!-- Fixed header with navigation bar -->
     <header>
       <nav>
-        <a href="mainpage.html">Home</a>
+        <a href="index.html">Home</a>
         <!-- <a href="#contactus">Contact Us</a> -->
         <a href="#about">About</a>
         <a href="#models">Models</a>
@@ -62,3 +62,4 @@
     <p>Help</p>
   </body>
 </html>
+app.use("/static", express.static('./static/'));
