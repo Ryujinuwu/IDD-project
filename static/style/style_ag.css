@@ -9,23 +9,23 @@
 
 #web-canvas-container {
   width: 50%;
-  height: 900px;
+  height: 100%;
   position: absolute;
   top: 1vh;
   z-index: 0;
-
 }
 
 .snba
 {
   display: flex;
   width: 100%;
-
+  position: relative;
   flex-direction: column;
   justify-content: center;
-  
+  top: 75px;
   align-items: center;
-  gap: 30px;;
+  gap: 30px;
+  background-color: #000000;
 
 }
 
@@ -34,15 +34,11 @@
   width: 100%;
   height: 375px;
   position: absolute;
-  
-  top: 72vh;
+  top: 90vh;
   z-index: 1;
+  background-color: rgb(0, 0, 0);
 }
-  #changevid{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+
   .video {
     display: flex;
     justify-content: center;
@@ -62,7 +58,7 @@
     width: 100%;
     height: 100%;
         position: relative;
-    background: transparent;
+    background: rgb(0, 0, 0);
     color: white;
   }
   
@@ -76,7 +72,7 @@
     height: 113%;
     right: 110px;
     text-align: left;
-    background: transparent;
+    background: rgb(247, 5, 5);
     z-index: 1;
 
 
@@ -88,7 +84,7 @@
     width: 100%;
     height: 100%;
         position: relative;
-    background: transparent;
+    background: rgb(0, 0, 0);
     color: white;
   }
 
