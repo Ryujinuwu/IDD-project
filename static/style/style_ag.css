@@ -19,14 +19,13 @@
 .snba
 {
   display: flex;
-  width: 1920px;
-  padding: 38px 250px;
+  width: 100%;
+
   flex-direction: column;
   justify-content: center;
   
   align-items: center;
-  gap: 30px;
-
+  gap: 30px;;
 
 }
 
@@ -38,7 +37,6 @@
   
   top: 72vh;
   z-index: 1;
-  background-color: #000000;
 }
 
   .video {
