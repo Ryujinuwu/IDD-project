@@ -217,7 +217,7 @@ hr {
 /*homepage section and adjustments and the position of the homepage section*/
 #homepage {
     position: absolute;
-    top: 80px;
+    top: 25px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -483,7 +483,7 @@ hr {
 /*containers for each section of the spec*/
 .specsbg {
     width: 456px;
-    height: 928px;
+    height: 800px;
     border-radius: 72px;
     background-color: rgba(217, 217, 217, 0.5);
     display: inline-block;
