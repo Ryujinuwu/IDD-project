@@ -551,6 +551,10 @@ hr {
     gap: 240px;
 }
 
+.creditsbot {
+    font-size: 8px;
+}
+
 .smallthings {
     display: flex;
     gap: 40px;
