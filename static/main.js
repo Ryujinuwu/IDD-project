@@ -14,7 +14,7 @@ import {
   Color,
 	Texture,
   Vector3
-} from 'webgi';
+} from 'webgi/plugins';
 
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
