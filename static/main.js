@@ -14,9 +14,9 @@ import {
   Color,
 	Texture,
   Vector3
-} from "/node_modules/.vite/deps/webgi.js";
+} from "webgi";
 // adding the dots don't work
-import * as THREE from "/node_modules/.vite/deps/three.js";
+import * as THREE from "three";
 
 const loader = new THREE.TextureLoader();
 
@@ -32,7 +32,7 @@ const loader = new THREE.TextureLoader();
 
 
 
-let scrollSpeed = 1.0;
+let scrollSpeed = 5.0;
 
 // Add an event listener for the 'wheel' event
 document.addEventListener('wheel', function(event) {
