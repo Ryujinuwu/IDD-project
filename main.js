@@ -37,7 +37,7 @@ const loader = new THREE.TextureLoader();
 
 
 
-let scrollSpeed = 1.0;
+let scrollSpeed = 5.0;
 
 // Add an event listener for the 'wheel' event
 document.addEventListener('wheel', function(event) {
@@ -94,7 +94,7 @@ document.querySelector('.green0')?.addEventListener('click', () => {
 })
 
 document.querySelector('.blue0')?.addEventListener('click', () => {
-  changeColor(new Color(0x4f5fd8), "assets/PacMadVid.mp4")
+  changeColor(new Color(0x4f5fd8), "assets/PacMadIDDVid.mp4")
 })
 
 
