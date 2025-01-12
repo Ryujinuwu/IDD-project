@@ -1,0 +1,633 @@
+/*browser reset*/
+* { 
+    margin: 0px;
+    border: none;
+    padding: 0px;
+}
+
+/*standard adjustments for body section*/
+body {
+    font-family: "Silkscreen", serif;
+    font-weight: 400;
+    font-style: normal;
+    background-image: url('../assets/bg.png');
+    background-repeat: repeat-y;
+    background-size: cover;
+}
+
+/*font sizes and adjustments*/
+h1 {
+    font-family: "Silkscreen", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 96px;
+    color: white;
+    margin-bottom: 8px;
+    margin-top: 8px;
+}
+
+h2 {
+    font-family: "Silkscreen", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 80px;
+    color: white;
+    margin-bottom: 8px;
+    margin-top: 8px;
+}
+
+h3 {
+    font-family: "Silkscreen", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 32px;
+    color: white;
+    margin-bottom: 8px;
+    margin-top: 8px;
+}
+
+p {
+    font-family: "Silkscreen", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    color: white;
+    margin-bottom: 8px;
+    margin-top: 8px;
+}
+
+/*horizontal rule adjustments, which is a horizontal line*/
+hr {
+    border: 1px solid white;
+}
+
+/*navigation bar, like the background itself, the container for all the nav buttons*/
+.navbar {
+    background-color: rgba(0, 0, 0, 0.95);
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+/*adjusting the position of the divs in navibar so that they are all in one row*/
+.navbar div {
+    display: flex;
+    align-items: center;
+}
+
+/*adjusting the spacing of the 3 divs*/
+.navdiv {   
+    width: 100%;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 120px;
+    padding-right: 120px;
+}
+
+/*for the logo and the logo image*/
+.logo div{
+    display: flex;
+    align-items: center;
+}
+
+/*for the logo image*/
+.logopicc {
+    width: 48px;
+    height: 48px;
+}
+
+/*for the logo*/
+.logoname {
+    font-size: 32px;
+    margin-left: 24px;
+    color: white;
+}
+
+/*adjustments for the section buttons*/
+.chapters a {
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 24px;
+    margin-left: 24px;
+    margin-right: 24px;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+}
+
+/*secton button hover animations*/
+.chapters a::after {
+    content: "";
+    position: absolute;
+    background-color: white;
+    height: 2px;
+    width: 100%;
+    left: 0;
+    bottom: 16px;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform .3s;
+}
+
+/*hover animation, so the line can go to full length at the end*/
+.chapters a:hover::after {
+    transform: scaleX(1);
+}
+
+/*adjustments for the preorder button*/
+.preorderbtn button {
+    font-family: "Silkscreen", regular;
+    padding: 8px 32px;
+    border: none;
+    outline: none;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 8px;
+}
+
+/*pre order button adjustments*/
+.preorderbtn button::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #CF9642;
+    left: 0;
+    top: 0;
+    border-radius: 8px;
+}
+
+/*pre order button animations*/
+.preorderbtn button::before {
+    content: "";
+    background: linear-gradient(
+        45deg,
+        #FF0000, #FF7300, #FFFB00, #48FF00,
+        #00FFD5, #002BFF, #FF00C8, #FF0000
+    );
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+    border-radius: 8px;
+    opacity: 0;
+}
+
+/*animation keyframes for the pre order button animations*/
+@keyframes glowing {
+    0%  {background-position: 0 0;}
+    50% {background-position: 400% 0;}
+    100% {background-position: 0 0;}
+}
+
+/*pre order button animations displayed when hovering*/
+.preorderbtn button:hover::before {
+    opacity: 1;
+}
+
+/*background color and adjustments for each section of the website*/
+.backgroundsect {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 1080px;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 64px 96px;
+    margin-top: 80px;
+}
+
+/*homepage section and adjustments and the position of the homepage section*/
+#homepage {
+    position: absolute;
+    top: 80px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/*adjustments for the pre order button on the home page which is just a bigger version of the one on the nav bar*/
+.homepagebtn button {
+    font-family: "Silkscreen", regular;
+    padding: 24px 32px;
+    border: none;
+    outline: none;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 40px;
+    margin-bottom: 36px;
+}
+
+.homepagebtn button::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #CF9642;
+    left: 0;
+    top: 0;
+    border-radius: 40px;
+}
+
+.homepagebtn button::before {
+    content: "";
+    background: linear-gradient(
+        45deg,
+        #FF0000, #FF7300, #FFFB00, #48FF00,
+        #00FFD5, #002BFF, #FF00C8, #FF0000
+    );
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+    border-radius: 40px;
+    opacity: 0;
+}
+
+.homepagebtn button:hover::before {
+    opacity: 1;
+}
+
+/*position and adjustments for the about section*/
+#about {
+    position: absolute;
+    top: 1240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*container for the about section*/
+.abt {
+    height: 800px;
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*background container for each smaller section in the about section*/
+.abtbg {
+    width: 680px;
+    height: 256px;
+    background-color: rgba(217, 217, 217, 0.5);
+    border-radius: 72px;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 24px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/*to adjust the positioning of the divs for the left side*/
+.abtleft {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 48px;
+}
+
+/*to adjust the positioning of the divs for the right side*/
+.abtright {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 48px;
+}
+
+/*headers for each section of the about sections*/
+.title {
+    margin-bottom: 40px;
+}
+
+/*position and align the elements inside each of the about sections*/
+.abtsect {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*position and adjustments for the preview section*/
+#preview {
+    position: absolute;
+    top: 2480px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    
+}
+
+/*container for the slider*/
+.slidecontainer {
+    width: 100%;
+}
+
+/*adjustments for the slider*/
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1040px;
+    height: 20px;
+    background: white;
+    outline: none;
+    opacity: 1;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    border-radius: 8px;
+}
+
+.slider:hover {
+    opacity: 1;
+}   
+
+/*for the toggle for people to slide the slider for google chrome*/
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 208px;
+    height: 64px;
+    border: 0;
+    background: url('../assets/slider.png') no-repeat center center;
+    background-size: contain;
+    cursor: pointer;
+    scale: 90%;
+}
+
+/*for the toggle for people to slide the slider for firefox*/
+.slider::-moz-range-thumb {
+    width: 208px;
+    height: 64px;
+    border: 0;
+    background: url('../assets/slider.png') no-repeat center center;
+    background-size: contain;
+    cursor: pointer;
+    scale: 90%;
+}
+
+/*preview buttons for the different designs of the laptop*/
+.color-options {
+    display: flex;
+    justify-content: center;
+    gap: 64px;
+    display: flex;
+    margin-top: 40px;
+}
+  
+/*the button adjustments for the preview buttons to see the different designs*/
+.button {
+    width: 88px;
+    height: 88px;
+    border: 4px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+  
+/*button colors to represent each design*/
+.black0 {
+    background-color: black;
+}
+  
+.red0 {
+    background-color: #d35d6e;
+}
+  
+.blue0 {
+    background-color: #4f5fd8;
+}
+  
+.green0 {
+    background-color: #4caf50;
+}
+  
+.button:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s;
+}
+
+/*position and adjustments for the why section*/
+#why {
+    position: absolute;
+    top: 3432px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/*to adjust the containers for each section*/
+.smallwhybg {
+    width: 472px;
+    height: 504px;
+    border-radius: 72px;
+    background-color: rgba(217, 217, 217, 0.5);
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 24px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*tp adjust the position of all 3 of the sections*/
+.bigwhy {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*margin for the why section*/
+.whymargin {
+    margin-bottom: 40px;
+}
+
+/*position and adjustments for the specs section*/
+#specs {
+    position: absolute;
+    top: 4592px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*containers for each section of the spec*/
+.specsbg {
+    width: 456px;
+    height: 800px;
+    border-radius: 72px;
+    background-color: rgba(217, 217, 217, 0.5);
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 24px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/*position adn adjustments of the powerup section*/
+#powerup {
+    position: absolute;
+    top: 5752px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*aligning the text in the powerup section*/
+.powerupdesc {
+    width: 800px;
+    height: 792px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pudesctop {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pudescmid {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.pudescbot {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*adjustments for the credit section*/
+#credits {
+    position: absolute;
+    top: 6912px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 840px;
+}
+
+.creditstop {
+    display: flex;
+    gap: 240px;
+}
+
+.creditsbot {
+    font-size: 8px;
+}
+
+.smallthings {
+    display: flex;
+    gap: 40px;
+}
+
+.creditscopyright {
+    display: flex;
+    gap: 240px;
+}
+
+/*adjustments for the pre order form*/
+#preorderform {
+    position: absolute;
+    margin-top: 160px;
+}
+
+.container {
+    padding: 16px;
+}
+
+input[type=text], input[type=email], input[type=tel] {
+    font-family: "Silkscreen", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    width: 100%;
+    padding: 16px;
+    margin: 8px 0px 24px 0px;
+    display: inline-block;
+    border: none;
+    background: rgba(217, 217, 217, 0.5);
+    border-radius: 8px;
+    color: white;
+}
+
+input[type=text]:focus, input[type=email]:focus, input[type=tel]:focus {
+    background-color: rgba(217, 217, 217, 0.25);
+    outline: none;
+}
+
+.registerbtn {
+    font-family: "Silkscreen", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    background-color: #EC68AA;
+    color: white;
+    width: 100%;
+    display: inline-block;
+    padding: 16px 24px;
+    margin: 8px 0px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 8px;
+    opacity: 0.5;
+}
+
+.registerbtn:hover {
+    opacity: 1;
+}
+
+.cbinterest {
+    display: flex;
+    gap: 24px;
+}
+
+#creditspreorderpage {
+    position: absolute;
+    margin-top: -80px;
+    top: 1240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 840px;
+}

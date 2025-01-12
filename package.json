@@ -32,7 +32,8 @@
   },
   "type": "module",
   "dependencies": {
-    "three": "^0.170.0"
+    "three": "^0.170.0",
+    "vite-plugin-dynamic-import": "^1.6.0"
   },
   "author": "",
   "license": "ISC"

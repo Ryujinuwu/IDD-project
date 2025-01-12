@@ -1,0 +1,324 @@
+<!Doctype html>
+<html lang="en">
+    <head>
+        <title>Potato</title>
+        
+        <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAABhpNQAAAAAAB1XgABCls8AUH+jALHX8gBZtN4AbLrgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEREREREREREREREREREREREREiIiERERERMzMzMiIRERNkZmYzMiERBmd3ZmYzIhEHd2dHdmYyEQdXd3d3dDIREHdVV0d3YxERAEdVV3dwEREQAAd3VQAREREREAAAARERERERERERERERERERERERERERERERERERERERERERH//wAA+D8AAOAHAADAAwAAgAEAAAAAAAAAAAAAAAAAAIAAAADAAAAA4AAAAPABAAD/AwAA//8AAP//AAD//wAA">  
+        
+        
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+      <script type="module" crossorigin src="/assets/main-76a2cd65.js"></script>
+      <link rel="modulepreload" crossorigin href="/assets/extraJS-758aee30.js">
+      <link rel="stylesheet" href="/assets/index-74fb168a.css">
+    </head>  
+    <body>
+        <header>
+            <nav class="navbar"> <!--one big div for 3 divs so that they can be aligned left, middle and right for the logo, section buttons and pre order button respectively, then smaller divs to position and align the elements within the 3 divs-->
+                <div class="navdiv">
+                    <div class="logo">
+                        <div class="logopic">
+                            <img src="/assets/potatologo-6d7cfed3.png" alt="logo pic" class="logopicc">
+                        </div>
+                        <div class="logoname">
+                            <p>Potato</p>
+                        </div>
+                    </div>
+                    <div class="chapters">
+                        <a class="active" href="#homepage"><p>Home</p></a>
+                        <a href="#about"><p>About</p></a>
+                        <a href="#preview"><p>Models</p></a>
+                        <a href="#specs"><p>Specs</p></a>
+                        <a href="#credits"><p>More</p></a>
+                    </div>
+                    <div class="preorderbtn">
+                        <a href="preorderpage.html">
+                            <button><p>Pre-Order Now</p></button>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+
+
+        <section id="homepage" class="backgroundsect"><!--homepage section-->
+            <div class="homepagetop">
+                <h2>Potato presents</h2>
+                <h1>uPots Retro</h1>
+            </div>
+            <p>insert image</p>
+            <div id="web-canvas-container">
+                <canvas id="web-canvas"></canvas>
+              </div>
+            <div class="homepagebottom">
+                <div class="homepagebtn">
+                    <a href="preorderpage.html">
+                        <button><h3>Pre-Order Now</h3></button>
+                    </a>
+                </div>
+                <h3>From 250000¥</h3>
+            </div>
+        </section>
+        
+        <section id="about" class="backgroundsect"><!--about section-->
+            <div class="abt">
+                <div class="abtleft">
+                    <div class="abtsect">
+                        <h3 class="title">Limited Edition</h3>
+                        <div class="abtbg">
+                            <p>Submit your interest right away!</p>
+                            <br>
+                            <p>uPots Retro will only be available for a limited time. No more will be manufacturerd once sold out. Get yours now before it's too late!</p>
+                        </div>
+                    </div>
+                    <div class="abtsect">
+                        <h3 class="title">Gaming</h3>
+                        <div class="abtbg">
+                            <p>Worried about the performance?</p>
+                            <br>
+                            <p>uPots Retro laptops are all fitted with high performance CPUs and GPUs. Any game it may be, uPots Retro will run it excellently and smoothly!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="abtright">
+                    <div class="abtsect">
+                        <h3 class="title">Retro</h3>
+                        <div class="abtbg">
+                            <p>Miss the old days of gaming?</p>
+                            <br>
+                            <p>uPots Retro comes with preinstalled with PC renditions of 3 old school retro games: Pac Man, Pokemon Red,  and Super Mario Bros!</p>
+                        </div>
+                    </div>
+                    <div class="abtsect">
+                        <h3 class="title" class="title">Laptops</h3>
+                        <div class="abtbg">
+                            <p>Want to show off your special uPots?</p>
+                            <br>
+                            <p>uPots Retro has 4 different designs, 3 of which are inspired by the pre-installed retro games. Choose your favourite design now!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="preview" class="backgroundsecta"><!--preview section-->
+            <div class="video">
+                <video autoplay loop muted playsinline id="changevid">
+                    <source src= /assets/MarioIDDVid-4c517b1d.mp4 type="video/mp4" ></source>
+                  </video>
+
+
+            <div class = "overlay-text" >
+
+                <div id="web-canvas-container">
+                    <canvas id="web-canvas"></canvas>
+                  </div>
+
+                <div id = "snbaholder">
+                    <div class = "snba">
+                        <div class="slidecontainer">
+                            <input type="range" min="1" max="100" value="1" id="myrange" class="slider">
+                        </div>
+    
+
+                        <div class="color-options">
+                            <div class="button black0"></div>
+                            <div class="button red0"></div>
+                            <div class="button blue0"></div>
+                            <div class="button green0"></div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <section id="why" class="backgroundsect"> <!--why section-->
+            <h2 class="whymargin">WHy uPots is for you.</h2>
+            <div class="bigwhy">
+                <div class="smallwhybg">
+                    <h3 class="whymargin">Trade In</h3>
+                    <p>Trade in eligible uPots for credits towards your next purchase.</p>
+                </div>
+                <div class="smallwhybg">
+                    <h3 class="whymargin">Customization</h3>
+                    <p>Choose your chip, memory, storage, and even design.</p>
+                </div>
+                <div class="smallwhybg">
+                    <h3 class="whymargin">Warranty</h3>
+                    <p>Potato provides 3 years of warranty with uPots.</p>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section id="specs" class="backgroundsect"> <!--specs section-->
+            <div class="specsbg">
+                <h3>uPots Retro Air</h3>
+                <p>250000 ¥</p>
+                <p></p>
+                <p></p>
+                <p>insert image</p>
+                <p></p>
+                <p>NVIDIA GeForce RTX 4050 6GB GDDR6</p>
+                <p></p>
+                <p>AMD Ryzen 7 7840HS (8 Cores)</p>
+                <p></p>
+                <p>16GB Samsung DDR5  4800MHz (8x2)</p>
+                <p></p>
+                <p>1TB Lexar NM790 Gen4 SSD</p>
+                <p></p>
+                <p>15.6" FHD 144Hz Wide View Angle Display (1920x1080)</p>
+            </div>
+            <div class="specsbg">
+                <h3>uPots Retro Pro</h3>
+                <p>3400000 ¥</p>
+                <p></p>
+                <p></p>
+                <p>insert image</p>
+                <p></p>
+                <p>NVIDIA GeForce RTX 4060 8GB GDDR6</p>
+                <p></p>
+                <p>AMD Ryzen 7 7840HS (8 Cores)</p>
+                <p></p>
+                <p>16GB Samsung DDR5  4800MHz (8x2)</p>
+                <p></p>
+                <p>1TB Lexar NM790 Gen4 SSD</p>
+                <p></p>
+                <p>15.6" FHD 144Hz Wide View Angle Display (1920x1080)</p>
+            </div>
+            <div class="specsbg">
+                <h3>uPots Retro Max</h3>
+                <p>460000 ¥</p>
+                <p></p>
+                <p></p>
+                <p>insert image</p>
+                <p></p>
+                <p>NVIDIA GeForce RTX 4070 8GB GDDR6</p>
+                <p></p>
+                <p>AMD Ryzen 7 7840HS (16 Cores)</p>
+                <p></p>
+                <p>16GB Samsung DDR5 5600MHz (8x2)</p>
+                <p></p>
+                <p>2TB Lexar NM790 Gen4 SSD</p>
+                <p></p>
+                <p>15.6” QHD 165Hz Wide View Angle Display (2560 x 1440)</p>
+            </div>
+        </section>
+
+
+
+        <section id="powerup" class="backgroundsect"> <!--powerup section-->
+            <div class="video2">
+                <video autoplay loop muted playsinline>
+                    <source src= "/assets/MarioJumpIDDVid-3e0399ab.mp4" type="video/mp4" ></source>
+                  </video>
+            </div>
+
+            <div class="powerupdesc">
+                <div class="pudesctop">
+                    <h2>Power up with</h2>
+                    <h1>uPots Retro</h1>
+                </div>
+                <div class="pudescbot">
+                <div class="pudescmid">
+                    <h3>Introducing the Upots Retro Max</h3>
+                    <p>460000 ¥</p>
+                </div>
+                <p class="whymargin">Here's a cooler take on the UPOTS RETRO MAX:</p>
+                <p class="whymargin">Unleash the Past. Dominate the Present.</p>
+                <p class="whymargin">A fusion of classic aesthetics and cutting-edge power.</p>
+                <br>
+                <p class="whymargin">It boasts powerful AMD Ryzen 7 processors and NVIDIA RTX 40 Series graphics for top-tier gaming performance. The sleek, minimalist design with a nostalgic touch is visually striking and offers excellent value for money. This laptop bridges the gap between retro style and modern gaming prowess, to "Unleash the Past. Dominate the Present."</p>
+                </div>
+                <div class="homepagebtn">
+                    <a href="preorderpage.html">
+                        <button><h3>Pre-Order Now</h3></button>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+
+
+        <footer id="credits" class="backgroundsect"> <!--credits section-->
+            <div class="creditstop">
+                <div class="cproducts">
+                    <h3>Products</h3>
+                    <br>
+                    <br>
+                    <p>Laptops</p>
+                    <br>
+                    <p>Keyboards</p>
+                    <br>
+                    <p>Mouse</p>
+                    <br>
+                    <p>Mousepads</p>
+                    <br>
+                    <p>Graphic Cards</p>
+                    <br>
+                    <p>Headsets</p>
+                </div>
+                <div class="cpotato">
+                    <h3>Potato</h3>
+                    <br>
+                    <br>
+                    <p>Terms and Conditions</p>
+                    <br>
+                    <p>Privacy Policy</p>
+                    <br>
+                    <p>Potato Communities</p>
+                    <br>
+                    <p>About Us</p>
+                    <br>
+                    <p>Contact Us</p>
+                </div>
+                <div class="cneedhelp">
+                    <h3>Need Help?</h3>
+                    <br>
+                    <br>
+                    <p>Support</p>
+                    <br>
+                    <p>Warranty Infos</p>
+                    <br>
+                    <p>FAQs/p>
+                    <br>
+                    <p>Email</p>
+                    <br>
+                    <p>Feedback</p>
+                </div>
+            </div>
+            <div class="creditsbot">
+                <hr>
+                <br>
+                <p>Prices are inclusive of GST. Free delivery for all orders.</p>
+                <br>
+                <p>Industry-standard encryption is used to protect the confidentiality of your personal information.</p>
+                <br>
+                <hr>
+                <br>
+                <div class="creditscopyright">
+                    <p>Copyright© 2025 Potato. All rights reserved.</p>
+                    <div class="smallthings">
+                        <p>Privacy Policy</p>
+                        <p>Refunds</p>
+                        <p>Help</p>
+                    </div>
+                    <p>Singapore</p>
+                </div>
+            </div>
+        </footer>
+
+
+        
+    </body>
+    
+</html>

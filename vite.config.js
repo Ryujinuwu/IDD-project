@@ -3,6 +3,14 @@ import { viteStaticCopy } from 'vite-plugin-static-copy'
 import path from 'path'
 
 export default defineConfig({
+    build: {
+        rollupOptions: {
+          input: {
+            main: 'index.html', // Your main HTML file
+            extraJS: '/main.js', // Path to the additional JS file
+          }
+        }},
+
     plugins: [
         viteStaticCopy({
             targets: [
