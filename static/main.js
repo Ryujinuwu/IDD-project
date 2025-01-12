@@ -14,9 +14,9 @@ import {
   Color,
 	Texture,
   Vector3
-} from "/node_modules/.vite/deps/webgi.js";
+} from "/blob/main/node_modules/.vite/deps/webgi.js";
 // adding the dots don't work
-import * as THREE from "/node_modules/.vite/deps/three.js";
+import * as THREE from "/blob/main/node_modules/.vite/deps/three.js";
 
 const loader = new THREE.TextureLoader();
 
