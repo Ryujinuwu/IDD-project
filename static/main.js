@@ -2,19 +2,19 @@ import {
   ViewerApp,
   AssetManagerPlugin,
   addBasePlugins,
-  // ScrollableCameraViewPlugin,
-  // VariationConfiguratorPlugin,
-  // FrameFadePlugin,
+  ScrollableCameraViewPlugin,
+  VariationConfiguratorPlugin,
+  FrameFadePlugin,
 
-  // PickingPlugin,
-  // TweakpaneUiPlugin,
-  // MaterialConfiguratorPlugin,
+  PickingPlugin,
+  TweakpaneUiPlugin,
+  MaterialConfiguratorPlugin,
 
   // Import THREE.js internals
   Color,
 	Texture,
   Vector3
-} from 'webgi/plugins';
+} from 'webgi';
 
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
