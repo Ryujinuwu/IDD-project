@@ -339,7 +339,7 @@ p {
     width: 208px;
     height: 64px;
     border: 0;
-    background: url('./static/assets/slider.png') no-repeat center center;
+    background: url('../assets/slider.png') no-repeat center center;
     background-size: contain;
     cursor: pointer;
     scale: 90%;

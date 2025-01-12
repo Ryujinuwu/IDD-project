@@ -95,36 +95,40 @@
         </section>
 
 
-
         <section id="preview" class="backgroundsecta">
             <div class="video">
                 <video autoplay loop muted playsinline id="changevid">
-                    <source src="static/assets/MarioIDDVid.mp4" type="video/mp4"></source>
+                    <source src= null type="video/mp4" ></source>
                   </video>
 
 
             <div class = "overlay-text" >
 
-            <h3>insertmodel</h3>
+                <div id="web-canvas-container">
+                    <canvas id="web-canvas"></canvas>
+                  </div>
 
-            <div class="slidernbutton">
-                <div class="slidecontainer">
-                    <input type="range" min="1" max="100" value="1" id="myrange" class="slider">
-                </div>
+                <div id = "snbaholder">
+                    <div class = "snba">
+                    <div class="slidecontainer">
+                        <input type="range" min="1" max="100" value="1" id="myrange" class="slider">
+                    </div>
+    
 
                 <div class="color-options">
-                    <button onClick="('static/assets/MarioIDDVid.mp4')"  class="button black0"></button>
-                    <button class="button red0"></button>
-                    <button onClick="('static/assets/PacMadIDDVid.mp4')" class="button blue0"> </button>
-                    <button onClick="('static/assets/MarioIDDVid.mp4')" class="button green0"></button>
+                    <div class="button black0"></div>
+                    <div class="button red0"></div>
+                    <div class="button blue0"></div>
+                    <div class="button green0"></div>
 
                 </div>
+            </div>
 
                 <script src="/static/main.js" type="module"> </script>
       
             </div>
         </div>
-        </div>
+
 
          
         </section>
@@ -187,10 +191,16 @@
                 </ul>
             </div>
         </section>
+
+
+
         <section id="powerup" class="backgroundsect">
-            <div class="powerupimage">
-                <p>insert ur image here</p>
+            <div class="video2">
+                <video autoplay loop muted playsinline>
+                    <source src= "/static/assets/MarioJumpIDDVid.mp4" type="video/mp4" ></source>
+                  </video>
             </div>
+
             <div class="powerupdesc">
                 <div class="pudesctop">
                     <h2>Power up with</h2>
@@ -198,8 +208,8 @@
                 </div>
                 <div class="pudescbot">
                 <div class="pudescmid">
-                    <h3>Header 3</h3>
-                    <p>lorem</p>
+                    <h3>Introducing the Upots retro Max</h3>
+                    <p>460000 ¥</p>
                 </div>
                 <p class="whymargin">moretext</p>
                 <p class="whymargin">finaltext</p>

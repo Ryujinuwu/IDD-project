@@ -5,7 +5,7 @@ import {
   ScrollableCameraViewPlugin,
   VariationConfiguratorPlugin,
   FrameFadePlugin,
-  LoadingScreenPlugin,
+
   PickingPlugin,
   TweakpaneUiPlugin,
   MaterialConfiguratorPlugin,
@@ -16,17 +16,20 @@ import {
   Vector3
 } from 'webgi';
 
+import * as THREE from 'three';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+const loader = new THREE.TextureLoader();
 
 
-setupViewer();
+// window.onscroll = function() {
+//   if(document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+//       document.querySelector('.back-to-top').style.display = 'block';
+//   } else {
+//       document.querySelector('.back-to-top').style.display = 'none';
+//   }
+// };
 
-window.onscroll = function() {
-  if(document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-      document.querySelector('.back-to-top').style.display = 'block';
-  } else {
-      document.querySelector('.back-to-top').style.display = 'none';
-  }
-};
+
 
 let scrollSpeed = 1.0;
 
@@ -50,73 +53,108 @@ document.addEventListener('wheel', function(event) {
 
 async function setupViewer() {
   const viewer = new ViewerApp({
-      canvas: document.getElementById('preview'),
+      canvas: document.getElementById('web-canvas'),
   });
 
   await addBasePlugins(viewer);
 
   const manager = await viewer.addPlugin(AssetManagerPlugin);
 
+  //const manager = await viewer.addPlugin(AssetManagerPlugin);
+  // const manager = await viewer.getPlugin(AssetManagerPlugin);
+  // This must be called after adding any plugin that changes the render pipeline.
+	viewer.renderer.refreshPipeline();
+
   // Load an environment map if not set in the glb file
-  // await viewer.setEnvironmentMap("./assets/autumn_forest_2k.hdr");
+  await viewer.setEnvironmentMap("./static/assets/autumn forest.hdr");
 
-  await viewer.load("./assets/WithScreen.glb");
+  // await manager.addFromPath("./assets/casio watch.glb");
+  const model = await viewer.load("./static/assets/BaseIDDLaptop.glb");
 
-  // Camera transform
-	viewer.scene.activeCamera.position = new Vector3(1, 1, -5);
-	viewer.scene.activeCamera.target = new Vector3(0, 1, 0);
-		
-	// Camera options
-	const options = viewer.scene.activeCamera.getCameraOptions();
-	options.fov = 25;
-	viewer.scene.activeCamera.setCameraOptions(options);
-	
-	// Control options
-	const controls = viewer.scene.activeCamera.controls;
-	controls.autoRotate = false;
-	controls.autoRotateSpeed = 5;
-	controls.enableDamping = true;
-	controls.rotateSpeed = 2.0;
-	controls.enableZoom = true;
-	controls.enablePan = true;
-	controls.minDistance = 3;
-	controls.maxDistance = 12;
-
-  const picking = viewer.addPluginSync(PickingPlugin);
-  picking.hoverEnabled = true;
-  picking.enableWidget = false;
-  console.log(picking.getSelectedObject);
-  // const ui = viewer.addPluginSync(new TweakpaneUiPlugin(true));
-  // ui.setupPluginUi(PickingPlugin);
-  picking.addEventListener('hitObject', (e) => {
-      console.log('Hit object', e, e.intersects.selectedObject);
-      // set to null to prevent selection
-      // e.intersects.selectedObject = null
-  });
+  // let scrollSection = document.getElementById("scrollSection");
+  // await viewer.getPlugin(new ScrollableCameraViewPlugin(scrollSection));
 
 
-  // ui.setupPluginUi(MaterialConfiguratorPlugin);
+const laptop = manager.materials.findMaterialsByName('lambert1')[0]
+const screen = manager.materials.findMaterialsByName('Screen')[0]
+const design = new THREE.MeshBasicMaterial({map: new Texture(manager.materials.findMaterialsByName('lambert2')[0]).Texture})
+document.querySelector('.red0')?.addEventListener('click', () => {
+  changeColor(new Color(0xd35d6e), "static/assets/PokemonIDDVid.mp4", 'static/assets/CPokemon.png')
+  console.log("red pressed");
+})
 
-  // const sink = manager.materials.findMaterialsByName('Standardmaterial')[0]
-  // const top = manager.materials.findMaterialsByName('hh')[0]
-  // const drawer = manager.materials.findMaterialsByName('draw')[0]
-	// console.log(drawer);
+document.querySelector('.green0')?.addEventListener('click', () => {
+  changeColor(new Color(0x4caf50), "static/assets/MarioVid.mp4")
+})
 
-
-setupViewer();
-
-// var button = document.getElementById("button");
-// button.addEventListener("click", changevid);
-
-// function changevid(buttonlink) { 
-//   document.getElementById('changevid').src = buttonlink;
-// }
-
+document.querySelector('.blue0')?.addEventListener('click', () => {
+  changeColor(new Color(0x4f5fd8), "static/assets/PacMadIDDVid.mp4")
+})
 
 
-document.querySelector("preorderbtn")?.addEventListener('click', console.log(c)
-  // document.getElemqueentById('changevid').src = ('static/assets/PokemonIDDVid.mp4')
-  // console.log(c)
-)
+document.querySelector('.black0')?.addEventListener('click', () => {
+  changeColor(new Color(0x000000), null)
+})
+
+function changeColor(colorToBeChanged, newvid, pic) {
+  laptop.color = colorToBeChanged;
+  screen.color = new Color(0x000000);
+  console.log(design.map)
+  //loader.load(design.map).dispose()
+  //var texture2 = loader.load('static/assets/CPokemon.png')
+  //design.map = texture2;
+  //const geometry = new THREE.
+  //mesh = new THREE.Mesh( geometry, design )
+
+  //manager.getObjectByName('polySurface2_lambert2_0').material.map = new Texture(pic)
+
+  document.getElementById("changevid").src = newvid;
+  viewer.scene.setDirty();
+}
+
+
 
 }
+// 
+// const renderer = new THREE.WebGLRenderer({ antiallias: true});
+// renderer.outputColorSpace = THREE.SRGBColorSpace;
+
+// renderer.setSize(window.innerWidth, window,innerHeight);
+// renderer.setClearColor(0x000000);
+// renderer.setPixelRatio(window.devicePixelRatio);
+
+// document.body.appendChild(renderer.domElement);
+
+// const scene = new THREE.Scene();
+
+// const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window,innerHeight, 1, 1000);
+// camera.position.set(4, 5, 11);
+// camera.lookAt(0, 0, 0);
+
+// // geometry for laptop to be on
+// const groundGeometry = new THREE.PlaneGeometry(20, 20, 32, 32);
+// groundGeometry.rotateX(-Math.PI / 2); // rotate by 90
+// const groundMaterial = new THREE.MeshStandardMaterial({
+//   color : 0x555555,
+//   side: THREE.DoubleSide
+// });
+
+// const groundMesh = new THREE.Mesh(groundGeometry, groundMaterial);
+// scene.add("groundMesh"); //issue here
+
+// //add light to scene
+// const Light = new THREE.Light(0xffffff, 3, 100, 0.2, 0.5);
+// Light.position.set(0, 25, 0);
+// scene.add(Light);
+
+// 
+// const loader = new GLTFLoader().setPath('./assets/BaseIDDLaptop.glb')
+
+// function animate() 
+// {
+//   requestAnimationFrame(animate);
+//   renderer.render(scene, camera);
+// }
+
+// animate();
+setupViewer();
