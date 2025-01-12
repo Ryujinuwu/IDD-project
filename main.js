@@ -182,29 +182,7 @@ async function setupViewerhome() {
   // await viewer.getPlugin(new ScrollableCameraViewPlugin(scrollSection));
 }
 
-async function setupViewerlast() {
-  const viewer = new ViewerApp({
-      canvas: document.getElementById('web-canvaslast'),
-  });
 
-  await addBasePlugins(viewer);
-
-  const manager = await viewer.addPlugin(AssetManagerPlugin);
-
-  //const manager = await viewer.addPlugin(AssetManagerPlugin);
-  // const manager = await viewer.getPlugin(AssetManagerPlugin);
-  // This must be called after adding any plugin that changes the render pipeline.
-	viewer.renderer.refreshPipeline();
-
-  // Load an environment map if not set in the glb file
-  await viewer.setEnvironmentMap("./assets/autumn forest.hdr");
-
-  // await manager.addFromPath("./assets/casio watch.glb");
-  const model = await viewer.load("./assets/JumpAnim.glb");
-
-  // let scrollSection = document.getElementById("scrollSection");
-  // await viewer.getPlugin(new ScrollableCameraViewPlugin(scrollSection));
-}
 // 
 // const renderer = new THREE.WebGLRenderer({ antiallias: true});
 // renderer.outputColorSpace = THREE.SRGBColorSpace;
