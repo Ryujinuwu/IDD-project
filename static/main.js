@@ -2,13 +2,13 @@ import {
   ViewerApp,
   AssetManagerPlugin,
   addBasePlugins,
-  ScrollableCameraViewPlugin,
-  VariationConfiguratorPlugin,
-  FrameFadePlugin,
+  // ScrollableCameraViewPlugin,
+  // VariationConfiguratorPlugin,
+  // FrameFadePlugin,
 
-  PickingPlugin,
-  TweakpaneUiPlugin,
-  MaterialConfiguratorPlugin,
+  // PickingPlugin,
+  // TweakpaneUiPlugin,
+  // MaterialConfiguratorPlugin,
 
   // Import THREE.js internals
   Color,
