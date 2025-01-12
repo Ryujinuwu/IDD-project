@@ -166,7 +166,7 @@ async function setupViewerhome() {
   await addBasePlugins(viewer);
 
   const manager = await viewer.addPlugin(AssetManagerPlugin);
-
+  await viewer.addPlugin(ScrollableCameraViewPlugin);
   //const manager = await viewer.addPlugin(AssetManagerPlugin);
   // const manager = await viewer.getPlugin(AssetManagerPlugin);
   // This must be called after adding any plugin that changes the render pipeline.
