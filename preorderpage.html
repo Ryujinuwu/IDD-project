@@ -1,57 +1,68 @@
-<!DOCTYPE html>
+<!Doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pre-Order Page</title>
-    <link rel="stylesheet" href="static/style/style_preorder_xpd.css">
+    <link rel="stylesheet" type="text/css" href="static/style/style_xpd.css"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
   </head>
-
   <body>
-    <!-- Fixed header with navigation bar -->
     <header>
-      <nav>
-        <a href="index.html">Home</a>
-        <!-- <a href="#contactus">Contact Us</a> -->
-        <a href="#about">About</a>
-        <a href="#models">Models</a>
-        <a href="#Register">Register</a> 
-        <!-- <div class="btn-group"> -->
-            <button>Login</button>
-            <button>Pre-Order Now</button>     
+      <nav class="navbar">
+        <div class="navdiv">
+          <div class="logo">
+            <div class="logopic">
+              <img src="static/assets/potatologo.png" alt="logo pic" class="logopicc">
+            </div>
+            <div class="logoname">
+              <p>Potato</p>
+            </div>
+          </div>
+          <div class="chapters">
+            <a class="active" href="#homepage"><p>Home</p></a>
+            <a href="#preview"><p>Models</p></a>
+            <a href="#about"><p>About</p></a>
+          </div>
+          <div class="preorderbtn">
+            <a href="preorderpage.html">
+              <button><p>Pre-Order Now</p></button>
+            </a>
+          </div>
+        </div>
       </nav>
     </header>
-
-
-    <!-- Body -->
-    <div class="content">
-      <section id="pre-order form">
-        <h2>Join our preorder list!</h2>
-    <form action="/action_page.php">
-    <label for="Country/Regions">Country/Regions</label>
-    <br>
-        <input type="text" id="Country/Regions"
-    country="Country/Regions" value=""><br>
-    <label for="email">Email</label>
-    <br>
-        <input type="text" id="email"
-    email="email" value="">
-    <p>We will send updates of the products to your mobile number or email. </p><br>
-    <label for="mnumber">Mobile Number</label>
-    <br>
-        <input type="text" id="mnumber"
-    mnumber="mnumber" value="">
-    <p>Your mobile number cannot be changed, so please ensure it's correct. </p><br>
-    <label><input type="checkbox" />I don't have a mobile number</label><br><br>
-        <input type="submit" value="Submit your interest">
-    </form>
-      </section>
-		</div>
-    <div>
-        <p>Prices are inclusive of GST. Free delivery for all orders.</p>
-        <p>Industry-standard encryption is used to protect the confidentiality of your personal information.</p>
-    </div>
-    </div>
+    <div class="backgroundsect">
+      <div class="content">
+        <section id="pre-order form">
+          <h2>Join our preorder list!</h2>
+      <form action="/action_page.php">
+      <label for="Country/Regions">Country/Regions</label>
+      <br>
+          <input type="text" id="Country/Regions"
+      country="Country/Regions" value=""><br>
+      <label for="email">Email</label>
+      <br>
+          <input type="text" id="email"
+      email="email" value="">
+      <p>We will send updates of the products to your mobile number or email. </p><br>
+      <label for="mnumber">Mobile Number</label>
+      <br>
+          <input type="text" id="mnumber"
+      mnumber="mnumber" value="">
+      <p>Your mobile number cannot be changed, so please ensure it's correct. </p><br>
+      <label><input type="checkbox" />I don't have a mobile number</label><br><br>
+          <input type="submit" value="Submit your interest">
+      </form>
+        </section>
+      </div>
+      <div>
+          <p>Prices are inclusive of GST. Free delivery for all orders.</p>
+          <p>Industry-standard encryption is used to protect the confidentiality of your personal information.</p>
+      </div>
+      </div>
+  </div>
 
     <!-- Footer -->
     <footer>
