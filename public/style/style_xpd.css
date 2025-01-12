@@ -401,7 +401,7 @@ hr {
     justify-content: center;
     gap: 64px;
     display: flex;
-    margin-top: 40px;
+    margin-top: -16px;
 }
   
 /*the button adjustments for the preview buttons to see the different designs*/

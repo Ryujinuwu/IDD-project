@@ -37,7 +37,7 @@ const loader = new THREE.TextureLoader();
 
 
 
-let scrollSpeed = 5.0;
+let scrollSpeed = 1.0;
 
 // Add an event listener for the 'wheel' event
 document.addEventListener('wheel', function(event) {
@@ -90,7 +90,7 @@ document.querySelector('.red0')?.addEventListener('click', () => {
 })
 
 document.querySelector('.green0')?.addEventListener('click', () => {
-  changeColor(new Color(0x4caf50), "assets/MarioIDDVid.mp4")
+  changeColor(new Color(0x4caf50), "assets/MarioVid.mp4")
 })
 
 document.querySelector('.blue0')?.addEventListener('click', () => {
@@ -117,9 +117,93 @@ function changeColor(colorToBeChanged, newvid, pic) {
   document.getElementById("changevid").src = newvid;
   viewer.scene.setDirty();
 }
+// new
+document.querySelector('.red0')?.addEventListener('click', () => {
+  changeDesignTexture('/assets/CPokemon.png');
+});
+
+document.querySelector('.green0')?.addEventListener('click', () => {
+  changeDesignTexture('/assets/CMario.png');
+});
+
+document.querySelector('.blue0')?.addEventListener('click', () => {
+  changeDesignTexture('/assets/CPacMan.png');
+});
+
+document.querySelector('.black0')?.addEventListener('click', () => {
+  changeDesignTexture('/assets/CNorm.png');
+});
+
+function changeDesignTexture(texturePath) {
+  const backMaterial = manager.materials.findMaterialsByName('lambert2')[0]; 
+  if (!backMaterial) {
+    console.error('Material "lambert2" not found.');
+    return;
+  }
+
+  if (texturePath) {
+    const loader = new THREE.TextureLoader();
+    loader.load(texturePath, (texture) => {
+      backMaterial.map = texture; 
+      backMaterial.needsUpdate = true;
+      viewer.scene.setDirty(); 
+    });
+  } else {
+    backMaterial.map = null;
+    backMaterial.needsUpdate = true; 
+    viewer.scene.setDirty(); 
+  }
+}
 
 
+}
 
+async function setupViewerhome() {
+  const viewer = new ViewerApp({
+      canvas: document.getElementById('web-canvashome'),
+  });
+
+  await addBasePlugins(viewer);
+
+  const manager = await viewer.addPlugin(AssetManagerPlugin);
+
+  //const manager = await viewer.addPlugin(AssetManagerPlugin);
+  // const manager = await viewer.getPlugin(AssetManagerPlugin);
+  // This must be called after adding any plugin that changes the render pipeline.
+	viewer.renderer.refreshPipeline();
+
+  // Load an environment map if not set in the glb file
+  await viewer.setEnvironmentMap("./assets/autumn forest.hdr");
+
+  // await manager.addFromPath("./assets/casio watch.glb");
+  const model = await viewer.load("./assets/LaptopHeroAnim.glb");
+
+  // let scrollSection = document.getElementById("scrollSection");
+  // await viewer.getPlugin(new ScrollableCameraViewPlugin(scrollSection));
+}
+
+async function setupViewerlast() {
+  const viewer = new ViewerApp({
+      canvas: document.getElementById('web-canvaslast'),
+  });
+
+  await addBasePlugins(viewer);
+
+  const manager = await viewer.addPlugin(AssetManagerPlugin);
+
+  //const manager = await viewer.addPlugin(AssetManagerPlugin);
+  // const manager = await viewer.getPlugin(AssetManagerPlugin);
+  // This must be called after adding any plugin that changes the render pipeline.
+	viewer.renderer.refreshPipeline();
+
+  // Load an environment map if not set in the glb file
+  await viewer.setEnvironmentMap("./assets/autumn forest.hdr");
+
+  // await manager.addFromPath("./assets/casio watch.glb");
+  const model = await viewer.load("./assets/JumpAnim.glb");
+
+  // let scrollSection = document.getElementById("scrollSection");
+  // await viewer.getPlugin(new ScrollableCameraViewPlugin(scrollSection));
 }
 // 
 // const renderer = new THREE.WebGLRenderer({ antiallias: true});
@@ -164,3 +248,5 @@ function changeColor(colorToBeChanged, newvid, pic) {
 
 // animate();
 setupViewer();
+setupViewerhome();
+setupViewerlast();
