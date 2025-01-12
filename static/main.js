@@ -112,9 +112,62 @@ function changeColor(colorToBeChanged, newvid, pic) {
   viewer.scene.setDirty();
 }
 
+// new
+document.querySelector('.red0')?.addEventListener('click', () => {
+  changeDesignTexture('static/assets/CPokemon.png');
+});
 
+document.querySelector('.green0')?.addEventListener('click', () => {
+  changeDesignTexture('static/assets/CMario.png');
+});
+
+document.querySelector('.blue0')?.addEventListener('click', () => {
+  changeDesignTexture('static/assets/CPacMan.png');
+});
+
+document.querySelector('.black0')?.addEventListener('click', () => {
+  changeDesignTexture('static/assets/CNorm.png');
+});
+
+function changeDesignTexture(texturePath) {
+  const backMaterial = manager.materials.findMaterialsByName('lambert2')[0]; 
+  if (!backMaterial) {
+    console.error('Material "lambert2" not found.');
+    return;
+  }
+
+  if (texturePath) {
+    const loader = new THREE.TextureLoader();
+    loader.load(texturePath, (texture) => {
+      backMaterial.map = texture; 
+      backMaterial.needsUpdate = true;
+      viewer.scene.setDirty(); 
+    });
+  } else {
+    backMaterial.map = null;
+    backMaterial.needsUpdate = true; 
+    viewer.scene.setDirty(); 
+  }
+}
+
+
+const slider = document.getElementById('rotationSlider');
+
+slider.addEventListener('input', function () {
+  const rotationValue = slider.value * 3.6; 
+  if (model) {
+      model.rotation.y = rotationValue; 
+      viewer.scene.setDirty(); 
+  } else {
+      console.error("Model not found");
+  }
+});
+slider.addEventListener('input', function () {
+  console.log("Slider value:", slider.value);
+});
 
 }
+
 // 
 // const renderer = new THREE.WebGLRenderer({ antiallias: true});
 // renderer.outputColorSpace = THREE.SRGBColorSpace;
