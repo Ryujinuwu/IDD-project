@@ -1,3 +1,6 @@
+
+
+
 import {
   ViewerApp,
   AssetManagerPlugin,
@@ -69,10 +72,10 @@ async function setupViewer() {
 	viewer.renderer.refreshPipeline();
 
   // Load an environment map if not set in the glb file
-  await viewer.setEnvironmentMap("./static/assets/autumn forest.hdr");
+  await viewer.setEnvironmentMap("./assets/autumn forest.hdr");
 
   // await manager.addFromPath("./assets/casio watch.glb");
-  const model = await viewer.load("./static/assets/BaseIDDLaptop.glb");
+  const model = await viewer.load("./assets/BaseIDDLaptop.glb");
 
   // let scrollSection = document.getElementById("scrollSection");
   // await viewer.getPlugin(new ScrollableCameraViewPlugin(scrollSection));
@@ -82,16 +85,16 @@ const laptop = manager.materials.findMaterialsByName('lambert1')[0]
 const screen = manager.materials.findMaterialsByName('Screen')[0]
 const design = new THREE.MeshBasicMaterial({map: new Texture(manager.materials.findMaterialsByName('lambert2')[0]).Texture})
 document.querySelector('.red0')?.addEventListener('click', () => {
-  changeColor(new Color(0xd35d6e), "static/assets/PokemonIDDVid.mp4", 'static/assets/CPokemon.png')
+  changeColor(new Color(0xd35d6e), "assets/PokemonIDDVid.mp4", 'assets/CPokemon.png')
   console.log("red pressed");
 })
 
 document.querySelector('.green0')?.addEventListener('click', () => {
-  changeColor(new Color(0x4caf50), "static/assets/MarioIDDVid.mp4")
+  changeColor(new Color(0x4caf50), "assets/MarioIDDVid.mp4")
 })
 
 document.querySelector('.blue0')?.addEventListener('click', () => {
-  changeColor(new Color(0x4f5fd8), "static/assets/PacMadVid.mp4")
+  changeColor(new Color(0x4f5fd8), "assets/PacMadVid.mp4")
 })
 
 
@@ -104,7 +107,7 @@ function changeColor(colorToBeChanged, newvid, pic) {
   screen.color = new Color(0x000000);
   console.log(design.map)
   //loader.load(design.map).dispose()
-  //var texture2 = loader.load('static/assets/CPokemon.png')
+  //var texture2 = loader.load('assets/CPokemon.png')
   //design.map = texture2;
   //const geometry = new THREE.
   //mesh = new THREE.Mesh( geometry, design )
