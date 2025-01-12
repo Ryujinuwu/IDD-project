@@ -14,10 +14,10 @@ import {
   Color,
 	Texture,
   Vector3
-} from 'webgi';
+} from "/node_modules/.vite/deps/webgi.js?v=9df2c9c3";
 
-import * as THREE from 'three';
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+import * as THREE from "/node_modules/.vite/deps/three.js?v=7184c2d7";
+import { GLTFLoader } from "/node_modules/.vite/deps/three_examples_jsm_loaders_GLTFLoader__js.js?v=79328067";
 const loader = new THREE.TextureLoader();
 
 
