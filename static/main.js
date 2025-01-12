@@ -14,12 +14,11 @@ import {
   Color,
 	Texture,
   Vector3
-} from "/node_modules/.vite/deps/webgi.js";
-// adding the dots don't work
-import * as THREE from "/node_modules/.vite/deps/three.js";
+} from 'webgi';
 
+import * as THREE from 'three';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 const loader = new THREE.TextureLoader();
-
 
 
 // window.onscroll = function() {
@@ -85,11 +84,11 @@ document.querySelector('.red0')?.addEventListener('click', () => {
 })
 
 document.querySelector('.green0')?.addEventListener('click', () => {
-  changeColor(new Color(0x4caf50), "static/assets/MarioVid.mp4")
+  changeColor(new Color(0x4caf50), "static/assets/MarioIDDVid.mp4")
 })
 
 document.querySelector('.blue0')?.addEventListener('click', () => {
-  changeColor(new Color(0x4f5fd8), "static/assets/PacMadIDDVid.mp4")
+  changeColor(new Color(0x4f5fd8), "static/assets/PacMadVid.mp4")
 })
 
 
@@ -113,62 +112,9 @@ function changeColor(colorToBeChanged, newvid, pic) {
   viewer.scene.setDirty();
 }
 
-// new
-document.querySelector('.red0')?.addEventListener('click', () => {
-  changeDesignTexture('static/assets/CPokemon.png');
-});
 
-document.querySelector('.green0')?.addEventListener('click', () => {
-  changeDesignTexture('static/assets/CMario.png');
-});
-
-document.querySelector('.blue0')?.addEventListener('click', () => {
-  changeDesignTexture('static/assets/CPacMan.png');
-});
-
-document.querySelector('.black0')?.addEventListener('click', () => {
-  changeDesignTexture('static/assets/CNorm.png');
-});
-
-function changeDesignTexture(texturePath) {
-  const backMaterial = manager.materials.findMaterialsByName('lambert2')[0]; 
-  if (!backMaterial) {
-    console.error('Material "lambert2" not found.');
-    return;
-  }
-
-  if (texturePath) {
-    const loader = new THREE.TextureLoader();
-    loader.load(texturePath, (texture) => {
-      backMaterial.map = texture; 
-      backMaterial.needsUpdate = true;
-      viewer.scene.setDirty(); 
-    });
-  } else {
-    backMaterial.map = null;
-    backMaterial.needsUpdate = true; 
-    viewer.scene.setDirty(); 
-  }
-}
-
-
-const slider = document.getElementById('rotationSlider');
-
-slider.addEventListener('input', function () {
-  const rotationValue = slider.value * 3.6; 
-  if (model) {
-      model.rotation.y = rotationValue; 
-      viewer.scene.setDirty(); 
-  } else {
-      console.error("Model not found");
-  }
-});
-slider.addEventListener('input', function () {
-  console.log("Slider value:", slider.value);
-});
 
 }
-
 // 
 // const renderer = new THREE.WebGLRenderer({ antiallias: true});
 // renderer.outputColorSpace = THREE.SRGBColorSpace;
