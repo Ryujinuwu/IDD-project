@@ -217,7 +217,7 @@ hr {
 /*homepage section and adjustments and the position of the homepage section*/
 #homepage {
     position: absolute;
-    top: 0px;
+    top: 80px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -401,7 +401,7 @@ hr {
     justify-content: center;
     gap: 64px;
     display: flex;
-    margin-top: -16px;
+    margin-top: 40px;
 }
   
 /*the button adjustments for the preview buttons to see the different designs*/
@@ -478,11 +478,6 @@ hr {
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-
-.specsimage {
-    width:  320px;
-    height: auto;
 }
 
 /*containers for each section of the spec*/
@@ -633,7 +628,6 @@ input[type=text]:focus, input[type=email]:focus, input[type=tel]:focus {
     top: 1240px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: space-between;
     height: 840px;
 }
