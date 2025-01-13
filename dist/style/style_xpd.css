@@ -217,7 +217,7 @@ hr {
 /*homepage section and adjustments and the position of the homepage section*/
 #homepage {
     position: absolute;
-    top: 80px;
+    top: 0px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -480,6 +480,11 @@ hr {
     justify-content: space-between;
 }
 
+.specsimage {
+    width:  320px;
+    height: auto;
+}
+
 /*containers for each section of the spec*/
 .specsbg {
     width: 456px;
@@ -628,6 +633,7 @@ input[type=text]:focus, input[type=email]:focus, input[type=tel]:focus {
     top: 1240px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: space-between;
     height: 840px;
 }
