@@ -80,6 +80,18 @@ async function setupViewer() {
   // let scrollSection = document.getElementById("scrollSection");
   // await viewer.getPlugin(new ScrollableCameraViewPlugin(scrollSection));
 
+	// Camera options
+	const options = viewer.scene.activeCamera.getCameraOptions();
+	options.fov = 25;
+	viewer.scene.activeCamera.setCameraOptions(options);
+	
+	// Control options
+	const controls = viewer.scene.activeCamera.controls;
+
+	controls.enableZoom = false;
+	controls.enablePan = false;
+	controls.minDistance = 3;
+	controls.maxDistance = 7;
 
 const laptop = manager.materials.findMaterialsByName('lambert1')[0]
 const screen = manager.materials.findMaterialsByName('Screen')[0]
@@ -227,4 +239,3 @@ async function setupViewerhome() {
 // animate();
 setupViewer();
 setupViewerhome();
-setupViewerlast();
